@@ -27,7 +27,6 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration
     @Value("${spCloud.cassandra.password}")
     private String password;
 
-
     @Override
     protected String getKeyspaceName() {
         return keyspaceName;

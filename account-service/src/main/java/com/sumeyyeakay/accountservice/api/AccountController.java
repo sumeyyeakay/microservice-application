@@ -14,7 +14,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-
     @GetMapping("/{id}")
     public ResponseEntity<Account> get(@PathVariable("id") String id) {
         return ResponseEntity.ok(accountService.get(id));

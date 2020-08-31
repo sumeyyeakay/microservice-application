@@ -13,9 +13,6 @@ public class AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
-
-
-
     public Account get(String id) {
         return accountRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }

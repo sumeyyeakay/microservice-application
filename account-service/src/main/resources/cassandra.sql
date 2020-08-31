@@ -11,5 +11,6 @@ CREATE TABLE emp(
                     emp_phone varint
 );
 
+
 select * from emp
 
