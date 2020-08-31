@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Apache Cassandra" uuid="352a93b7-403c-4c9c-ac3c-c1e6f2ff17cd">
+      <driver-ref>cassandra</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:cassandra://192.168.99.100:9042</jdbc-url>
+      <vm-options>-Djavax.net.ssl.trustStore=&lt;path_to_client_truststore&gt; -Djavax.net.ssl.trustStorePassword=&lt;truststore_password&gt;</vm-options>
+    </data-source>
+  </component>
+</project>
