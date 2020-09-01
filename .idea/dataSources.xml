@@ -5,7 +5,7 @@
       <driver-ref>cassandra</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
-      <jdbc-url>jdbc:cassandra://192.168.99.100:9042</jdbc-url>
+      <jdbc-url>jdbc:cassandra://192.168.99.100:9042/example</jdbc-url>
       <vm-options>-Djavax.net.ssl.trustStore=&lt;path_to_client_truststore&gt; -Djavax.net.ssl.trustStorePassword=&lt;truststore_password&gt;</vm-options>
     </data-source>
   </component>

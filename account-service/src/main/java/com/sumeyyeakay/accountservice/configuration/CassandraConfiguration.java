@@ -1,30 +1,34 @@
 package com.sumeyyeakay.accountservice.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
 import org.springframework.data.cassandra.config.CassandraClusterFactoryBean;
 import org.springframework.data.cassandra.config.SchemaAction;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
 @Configuration
+@PropertySource("file:${C:\\Users\\sümeyye akay\\IdeaProjects\\microservice-application\\account-service\\src\\main\\resources/}/application.properties")
+//@PropertySource( {"classpath:/application.properties"})
 @EnableCassandraRepositories
 public class CassandraConfiguration extends AbstractCassandraConfiguration
 {
     //app.pro icinden getir demek icin value yazdik
-    @Value("${spCloud.cassandra.keyspace.name}")
+    @Value("${spring.data.cassandra.keyspace}")
     private String keyspaceName;
 
-    @Value("${spCloud.cassandra.port}")
+    @Value("${spring.data.cassandra.port}")
     private int port;
 
-    @Value("${spCloud.cassandra.contact.point}")
+    @Value("${spring.data.cassandra.contact.point}")
     private String contactPoint;
 
-    @Value("${spCloud.cassandra.username}")
+    @Value("${spring.data.cassandra.username}")
     private String username;
 
-    @Value("${spCloud.cassandra.password}")
+    @Value("${spring.data.cassandra.password}")
     private String password;
 
     @Override
@@ -49,7 +53,7 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration
 
     @Override
     public String[] getEntityBasePackages() {
-        return new String[] {"com.sumeyyeakay.accountservices"};
+        return new String[] {"com.sumeyyeakay"};
     }
 
     @Override
